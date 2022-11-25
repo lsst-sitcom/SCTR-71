@@ -31,7 +31,7 @@
 
 \title{LVV-P98: Verification of EPO Program Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-11-24 }
+\date{ 2022-11-25 }
 \author{ Lauren Corlies }
 
 \input{history_and_info.tex}
@@ -40,7 +40,7 @@
 \setDocAbstract{
 This is the test plan and report for
 \textbf{ Verification of EPO Program},
-an LSST milestone pertaining to the EPO Subsystem.\\
+an LSST milestone pertaining to the Data Management Subsystem.\\
 This document is based on content automatically extracted from the Jira test database on \docDate.
 The most recent change to the document repository was on \vcsDate.
 }
@@ -95,12 +95,18 @@ verified in test cycles:
   \textbf{Evaluation + Reporting} - user testing reports and
   demographics reports demonstrating the usability of the program
 \item
-  \textbf{Interface with Data Management} -~
+  \textbf{Interface with Data Management} - verify on preliminary data
+  sets the EPO side of the interface with DM since all software and
+  services are not yet completed
 \end{enumerate}
 
-The EPO program is defined in more detail in EPO DOC HERE. \citeds{LSE-89}
-contains the official requirements for EPO. \citeds{LSE-131} contains the
-interface requirements between Data Management and
+The EPO program is defined in more detail in
+\href{https://docushare.lsst.org/docushare/dsweb/Get/LEP-31/lep31_EPOdesign_20210416.pdf}{LEP-31
+EPO Design} .
+\href{https://docushare.lsst.org/docushare/dsweb/Get/LSE-89}{LSE-89}
+contains the official requirements for EPO.
+\href{https://docushare.lsst.org/docushare/dsweb/Get/LSE-131}{LSE-131}
+contains the interface requirements between Data Management and
 EPO.\\[2\baselineskip]
 
 
@@ -130,7 +136,7 @@ Section \ref{sect:overview} provides a summary of the test results, including an
 an overall assessment statement and suggestions for possible improvements.
 Section \ref{sect:detailedtestresults} provides detailed results for each step in each test case.
 
-The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P98}{LVV-P98} in Jira is \textbf{ Approved }.
+The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P98}{LVV-P98} in Jira is \textbf{ Completed }.
 
 \subsection{References}
 \label{sect:references}
@@ -169,34 +175,41 @@ desktops and mobile phones.~~
   testing prior to beginning a test cycle.
 \end{itemize}
 
+  \subsection{Exit Criteria}
+  In order for this event to be considered complete, the following
+criteria must be met:
+
+\begin{itemize}
+\tightlist
+\item
+  Raw test data, events, and telemetry have been saved for the EPO.
+\item
+  All test data has been analyzed and post processed.
+\item
+  A summary of the results of the test campaign has been captured in the
+  Overall Assessment and Recommended Improvements fields of this Test
+  Plan
+\item
+  A link to the verification artifacts used to produce the summary of
+  results has been populated in the Verification Artifacts field of this
+  Test Plan
+\item
+  Any failures have been captured in the
+  \href{https://jira.lsstcorp.org/projects/FRACAS/issues/}{FRACAS}
+  project
+\end{itemize}
 
 
 \subsection{Related Documentation}
 
+Docushare collection where additional relevant documentation can be found:
 
-\begin{longtable}{rp{10cm}l}
-\multicolumn{3}{c}{Jira Attachments} \\ \hline
-    To LVV-C201 results &
-  ScreenRecording2022-03-17at1.47.52PM.mov & \attachfile{attachments/ScreenRecording2022-03-17at1.47.52PM.mov}\\ \hline
-                                                                                        To LVV-C221 results &
-  00HomePage.pdf & \attachfile{attachments/00HomePage.pdf}\\ \hline
-            To LVV-C223 results &
-  Citizen\_Science\_Testing\_101322.pdf & \attachfile{attachments/Citizen_Science_Testing_101322.pdf}\\ \hline
-To LVV-C223 results &
-  zooniverse\_email\_cutouts\_101322.pdf & \attachfile{attachments/zooniverse_email_cutouts_101322.pdf}\\ \hline
-To LVV-C223 results &
-  zooniverse\_email\_cutouts\_101322.pdf & \attachfile{attachments/zooniverse_email_cutouts_101322.pdf}\\ \hline
-To LVV-C223 results &
-  Citizen\_Science\_Testing\_executed.pdf & \attachfile{attachments/Citizen_Science_Testing_executed.pdf}\\ \hline
-To LVV-C223 results &
-  Zoo\_email.pdf & \attachfile{attachments/Zoo_email.pdf}\\ \hline
-To LVV-C223 results &
-  Zooniverse\_SubjectSet.pdf & \attachfile{attachments/Zooniverse_SubjectSet.pdf}\\ \hline
-           \end{longtable}
-
-All documents provided as attachments in Jira are downloaded to Github and linked here for convenience.
-However, since they are not properly versioned, they should be considered informal and therefore
-not be part of the verification baseline.
+\begin{itemize}
+\item The verification artifacts that are not attached in the Test Cycles or
+Test Cases directly are located in this DocuShare
+collection:~\href{https://docushare.lsst.org/docushare/dsweb/View/Collection-11916}{DocuShare
+Collection-11916}
+\end{itemize}
 
 
 \subsection{PMCS Activity}
@@ -742,7 +755,7 @@ Lauren Corlies }
 } \\\hline
 \textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2719}{LVV-T2719}
-& {\small  } & {\small Blake Mason } &
+& {\small Blake Mason } & {\small Blake Mason } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small (1) Software Test Engineer }
@@ -750,7 +763,7 @@ Lauren Corlies }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2643}{LVV-T2643}
-& {\small  } & {\small Blake Mason } &
+& {\small Blake Mason } & {\small Blake Mason } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small (1) Software Test Engineer }
@@ -966,7 +979,7 @@ Lauren Corlies }
 & {\small Eric Rosas } & {\small Eric Rosas } &
 \begin{minipage}[]{6cm}
 \smallskip
-{\small  }
+{\small (1) Software Test Engineer }
 \medskip
 \end{minipage}
 \\ \hline
@@ -1035,7 +1048,7 @@ Lauren Corlies }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2680}{LVV-T2680}
-& {\small Eric Rosas } & {\small Mostafa Lutfi } &
+& {\small Eric Rosas } & {\small Eric Rosas } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small (1) Software Test Engineer }
@@ -1057,7 +1070,7 @@ Lauren Corlies }
 \begin{longtable}{p{2cm}cp{2.3cm}p{8.6cm}p{2.3cm}}
 \toprule
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P98}{LVV-P98}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ Verification of EPO Program }} & Approved \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ Verification of EPO Program }} & Completed \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C201}{LVV-C201}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ Skyviewer }} & Done \\\hline
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
@@ -1067,7 +1080,8 @@ Lauren Corlies }
 \begin{minipage}[]{9cm}
 \smallskip
 See the attached screen recording in docushare:
-\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40980/Screen\%20Recording\%202022-08-26\%20at\%2011.23.34\%20AM.mov}\\[2\baselineskip]
+\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40980/Screen\%20Recording\%202022-08-26\%20at\%2011.23.34\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 11.23.34 AM.mov}}\\[2\baselineskip]
 \medskip
 \end{minipage}
 &   \\\hline
@@ -1077,7 +1091,8 @@ See the attached screen recording in docushare:
 \begin{minipage}[]{9cm}
 \smallskip
 See the attached screen recording in
-docushare:~\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40982/Screen\%20Recording\%202022-08-26\%20at\%209.29.36\%20AM.mov}
+docushare:~\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40982/Screen\%20Recording\%202022-08-26\%20at\%209.29.36\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 9.29.36 AM.mov}}
 \medskip
 \end{minipage}
 &   \\\hline
@@ -1087,7 +1102,8 @@ docushare:~\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40982/Sc
 \begin{minipage}[]{9cm}
 \smallskip
 See the attached screen recording in docushare:
-​\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40981/Screen\%20Recording\%202022-08-26\%20at\%209.37.23\%20AM.mov}​​​
+‚Äã\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40981/Screen\%20Recording\%202022-08-26\%20at\%209.37.23\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 9.37.23 AM.mov}}‚Äã‚Äã‚Äã
 \medskip
 \end{minipage}
 &   \\\hline
@@ -1096,9 +1112,9 @@ See the attached screen recording in docushare:
 & Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-See the attached
-\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40978/Screen\%20Recording\%202022-08-26\%20at\%2010.50.58\%20AM.mov}{screen
-recording} in docushare.\\[2\baselineskip]
+See the attached screen recording in
+docushare:~\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40978/Screen\%20Recording\%202022-08-26\%20at\%2010.50.58\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 10.50.58 AM.mov}}\\[2\baselineskip]
 \medskip
 \end{minipage}
 &   \\\hline
@@ -1108,7 +1124,8 @@ recording} in docushare.\\[2\baselineskip]
 \begin{minipage}[]{9cm}
 \smallskip
 See the attached screen recording in docushare:
-\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40979/Screen\%20Recording\%202022-08-26\%20at\%2011.38.28\%20AM.mov}
+\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40979/Screen\%20Recording\%202022-08-26\%20at\%2011.38.28\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 11.38.28 AM.mov}}
 \medskip
 \end{minipage}
 &   \\\hline
@@ -1734,9 +1751,11 @@ to database columns)
 \begin{minipage}[]{9cm}
 \smallskip
 See the attached screen recording in docushare:
-\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-41058/Screen\%20Recording\%202022-09-07\%20at\%202.55.09\%20PM.mov}
-and
-​\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-41059/Screen\%20Recording\%202022-09-07\%20at\%202.59.40\%20PM.mov}​​​
+\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-41058/Screen\%20Recording\%202022-09-07\%20at\%202.55.09\%20PM.mov}{\textbf{Screen
+Recording 2022-09-07 at 2.55.09 PM.mov}}\\
+See the attached screen recording in docushare:
+\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-41059/Screen\%20Recording\%202022-09-07\%20at\%202.59.40\%20PM.mov}{\textbf{Screen
+Recording 2022-09-07 at 2.59.40 PM.mov}}
 \medskip
 \end{minipage}
 &   \\\hline
@@ -2023,8 +2042,9 @@ Recording 2022-09-09 at 4.53.48 PM.mov}}
 & Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-\href{https://docushare.lsstcorp.org/docushare/dsweb/Get/Document-43309/Screen\%20Recording\%202022-10-21\%20at\%202.17.30\%20PM.mov}{Recording
-2022-10-21 at 2.17.30 PM.mov}
+See the attached screen recording in
+docushare:~\href{https://docushare.lsstcorp.org/docushare/dsweb/Get/Document-43309/Screen\%20Recording\%202022-10-21\%20at\%202.17.30\%20PM.mov}{\textbf{Screen
+Recording 2022-10-21 at 2.17.30 PM.mov}}
 \medskip
 \end{minipage}
 &   \\\hline
@@ -2104,12 +2124,107 @@ See the docushare
 \subsection{Overall Assessment}
 \label{sect:overallassessment}
 
-Not yet available.
+This test plan for the EPO program verification consists of 8 test
+cycles which verifies both \citeds{LSE-89} and \citeds{LSE-131} requirement documents.
+Overall the execution of the traced test cases met the requirement
+specifications defined in those requirement documents.~
+
+For the EDC test cycle , some of the execution of the test cases
+actually verified the intent of the requirements due to various factors.
+For example, EPO-REQ-0175 states that the Zooniverse Project Builder
+shall allow authorized Data Rights Panel members to view existing
+metadata fields of the project's current subject set. But, there really
+is no ``metadata'' per se anymore with the way that the EPO Data Center
+and citizen science data pipeline work. What EPO are referring to as
+``metadata'' is really just the actual data fields, of which database
+columns will be approved and so data will be limited based on the
+columns in the database.Moreover, there is no specified upper limit for
+google platform storage option EPO has selected and the ~EDC will likely
+not contain 64TB by the end of the 10 year survey. Rubin EPO
+requirements Validation document attached to some EDC test cases (by
+Burwood group) provided additional insights and verification evidence
+for the object storage, database capacity and design, web server
+infrastructure, routing and connection related requirements.~
+
+The original author of the EPO requirements had a vision that EPO would
+be receiving large amounts of data every night from Data Management.
+However, what data was intended, why it was necessary, and how it would
+be used were never clearly defined. Instead of that approach, EPO has
+moved to a model where it only retrieves data from the Data Management
+databases on an as-needed basis. The citizen science infrastructure
+demonstrates that EPO has the capability for this transfer and this
+infrastructure will have to continue to evolve as Data Management
+completes its part of the Construction project.Furthermore, in order to
+verify the database quantity and size related requirements, the EPO team
+showed a demonstrated a scaled down version of data transfer and storage
+capabilities due to time and effort constraints. However, the EPO team
+did show the simulated calculations verifying the specified parameters.~
+
+For verifying EPO Website Requirements test cycle and verification of
+the EPO products, the EPO team used Google Chrome as the web browser in
+order to facilitate the testing process. In addition, the requirements
+themselves do not mandate any set of particular browsers to be
+supported. But, EPO team has used the industry standard platform Babel
+to ensure that the EPO program complies with and be styled correctly on
+all modern browsers and devices which includes- latest two versions of
+Edge, Safar, Firefox and Chrome on desktops, Chrome on android, and
+safari on IOS devices. Furthermore, the EPO team has tested all products
+manually in the above mentioned platforms. The EPO test personnels and
+System Verification Engineer involved frequently cross checked the test
+case executions on different platforms as well.~
+
+In the Skyviewer test cycle, the object details are simulated to verify
+that skyviewer contains a list of curated objects and graphic overlay
+for alerts stream data. When the real alert data streams are available,
+the sky viewer will be able to bring up the overlay and provide accurate
+information for the user.~
 
 \subsection{Recommended Improvements}
 \label{sect:recommendations}
 
-Not yet available.
+There are two verification tickets still open for verification in order
+to verify \citeds{LSE-89} requirements (EPO-REQ-0188,EPO-REQ-0189) at the end of
+the construction phase. For EPO-REQ-0188, a 3D telescope tour experience
+can not be provided until the primary construction of the observatory
+finishes. This verification ticket is already traced to a test case
+(LVV-T1931) with a preliminary step defined. EPO-REQ-0189 requirement's
+goal is to provide a fulldome projection of the LSST night sky above the
+observatory and highlighting the alert stream data. However, the alert
+stream data will not exist prior to the completion of the EPO
+Construction project. Hence, the EPO team delivered the first part of
+the requirement which is a fulldome projection of the night sky
+(verification ticket - LVV-19000). Additionally, most planetaria will
+not require near real-time updates of their materials. The EPO team can
+work to complete the second part of the requirement by providing a
+subset of the alert stream data for overlaying event detection in
+FY23.The verification ticket (LVV-20575) is available in the Rubin
+Verification system to verify the alert stream data portion of the
+requirement.
+
+Future DM verification at construction end should re-confirm with
+services in their final states. In particular, EPO will still have need
+for DM software and services such as, the Image Cutout service with an
+image formatter capable of writing EXIF metadata, the Butler Server to
+replace the EPO Data Center's stand-alone instance of the Butler
+service, and a DM Pipeline task that makes a HiPS image survey available
+in non-scientific but visually appealing color bands.The needs of these
+services extends to access to any databases, object stores,
+firewalls/VPCs, etc. required to access and use such DM software and
+services.~
+
+The requirements in relation to Data Rights Panel (EPO-REQ-0179) and
+Project Launch Panel (EPO-REQ-0180) are verified with deviation
+``accept-as-is'' by providing the policies for the formation and
+activities to be ~performed in anticipation of the first available Rubin
+data. So, it is recommended that those panels be created following the
+guidelines and policies provided by the EPO team as soon as the
+commissioning/survey validation data becomes available. For the
+diversity requirement(EPO-REQ-0276), the EPO team only could provide the
+policies for ~gender neutrality of content as the complete scenario of
+the contents in the EPO portal could not be achieved and viewed until
+the launch of the EPO portal. It is suggested that when there is enough
+content in the EPO portal, a review should be conducted to confirm the
+diversity of gender neutral content policies are in effect.~
 
 \newpage
 \section{Detailed Test Results}
@@ -2150,7 +2265,8 @@ Chrome respectively
 Execution status: {\bf Pass w/ Deviation }
 
 Final comment:\\See the attached screen recording in docushare:
-\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40980/Screen\%20Recording\%202022-08-26\%20at\%2011.23.34\%20AM.mov}\\[2\baselineskip]
+\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40980/Screen\%20Recording\%202022-08-26\%20at\%2011.23.34\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 11.23.34 AM.mov}}\\[2\baselineskip]
 
 
 Detailed steps results:
@@ -2329,7 +2445,8 @@ Verify that Object details data are queryable via GraphQL.
 Execution status: {\bf Pass }
 
 Final comment:\\See the attached screen recording in
-docushare:~\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40982/Screen\%20Recording\%202022-08-26\%20at\%209.29.36\%20AM.mov}
+docushare:~\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40982/Screen\%20Recording\%202022-08-26\%20at\%209.29.36\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 9.29.36 AM.mov}}
 
 
 Detailed steps results:
@@ -2408,7 +2525,8 @@ test case in Jira.
 Execution status: {\bf Pass }
 
 Final comment:\\See the attached screen recording in docushare:
-​\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40981/Screen\%20Recording\%202022-08-26\%20at\%209.37.23\%20AM.mov}​​​
+‚Äã\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40981/Screen\%20Recording\%202022-08-26\%20at\%209.37.23\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 9.37.23 AM.mov}}‚Äã‚Äã‚Äã
 
 
 Detailed steps results:
@@ -2453,9 +2571,9 @@ Complete all steps on a computer in the Chrome web browser
 
 Execution status: {\bf Pass }
 
-Final comment:\\See the attached
-\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40978/Screen\%20Recording\%202022-08-26\%20at\%2010.50.58\%20AM.mov}{screen
-recording} in docushare.\\[2\baselineskip]
+Final comment:\\See the attached screen recording in
+docushare:~\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40978/Screen\%20Recording\%202022-08-26\%20at\%2010.50.58\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 10.50.58 AM.mov}}\\[2\baselineskip]
 
 
 Detailed steps results:
@@ -2480,7 +2598,7 @@ Google Chrome.~
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 00:00
+See attached screengrab starting at 00:00
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2509,7 +2627,7 @@ seconds or less.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 00:13
+See attached screengrab starting at 00:13
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2531,7 +2649,7 @@ The all-sky images provided in the Skyviewer are in color.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 00:36
+See attached screengrab starting at 00:36
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2553,7 +2671,7 @@ As the user clicks and drags the Skyviewer all sky image pans.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 00:49
+See attached screengrab starting at 00:49
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2576,7 +2694,7 @@ pans in preset increments
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 00:55
+See attached screengrab starting at 00:55
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2599,7 +2717,7 @@ zooms out when you press the -/\_ key.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 01:04
+See attached screengrab starting at 01:04
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2624,7 +2742,7 @@ out
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 01:10
+See attached screengrab starting at 01:10
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2646,7 +2764,7 @@ There are 2 round white buttons.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 01:17
+See attached screengrab starting at 01:17
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2668,7 +2786,7 @@ Skyviewer all sky image zooms in at a preset increment.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 01:17
+See attached screengrab starting at 01:17
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2690,7 +2808,7 @@ Skyviewer all sky image zooms out at a preset increment.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 01:17
+See attached screengrab starting at 01:17
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2718,7 +2836,7 @@ an object icon reveals the object details modal.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 01:33
+See attached screengrab starting at 01:33
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2749,7 +2867,7 @@ less.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 01:17 and 03:35
+See attached screengrab starting at 01:17 and 03:35
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2775,7 +2893,7 @@ Image of the object seen at the top of the details modal
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 02:00
+See attached screengrab starting at 02:00
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2797,7 +2915,7 @@ coordinate information consistent with AVM standard
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 01:17
+See attached screengrab starting at 01:17
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2823,7 +2941,7 @@ identifier for each object.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 02:30
+See attached screengrab starting at 02:30
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2848,7 +2966,7 @@ interact-able.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 02:40
+See attached screengrab starting at 02:40
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2872,7 +2990,7 @@ The Filters Menu slides into view
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 04:14
+See attached screengrab starting at 04:14
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2894,7 +3012,7 @@ Observe all Object icons in the Explorer view are hidden
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 04:14
+See attached screengrab starting at 04:14
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2920,7 +3038,7 @@ criteria
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 04:14
+See attached screengrab starting at 04:14
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2970,7 +3088,7 @@ Explorer view shows the full-sky image with only transient ~icons
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 02:45
+See attached screengrab starting at 02:45
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2993,7 +3111,7 @@ Finds a Transient object
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 02:45
+See attached screengrab starting at 02:45
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -3015,7 +3133,7 @@ Opens Object Details Modal
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 02:45
+See attached screengrab starting at 02:45
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -3037,7 +3155,7 @@ Object type is transient
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 02:45
+See attached screengrab starting at 02:45
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -3061,7 +3179,7 @@ included in the modal
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 02:45
+See attached screengrab starting at 02:45
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -3083,7 +3201,7 @@ The transient tab has the correct animation that plays for the user.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab starting at 03:02
+See attached screengrab starting at 03:02
 
 }
 
@@ -3103,7 +3221,8 @@ display in the Skyviewer~
 Execution status: {\bf Pass }
 
 Final comment:\\See the attached screen recording in docushare:
-\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40979/Screen\%20Recording\%202022-08-26\%20at\%2011.38.28\%20AM.mov}
+\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40979/Screen\%20Recording\%202022-08-26\%20at\%2011.38.28\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 11.38.28 AM.mov}}
 
 
 Detailed steps results:
@@ -3128,7 +3247,7 @@ Example Tour landing page loads
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab
+See attached screengrab
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -3151,7 +3270,7 @@ accompanied by contextual information
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See attached sreengrab
+See attached screengrab
 
 }
 
@@ -16567,9 +16686,11 @@ security, and compatability
 Execution status: {\bf Pass }
 
 Final comment:\\See the attached screen recording in docushare:
-\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-41058/Screen\%20Recording\%202022-09-07\%20at\%202.55.09\%20PM.mov}
-and
-​\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-41059/Screen\%20Recording\%202022-09-07\%20at\%202.59.40\%20PM.mov}​​​
+\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-41058/Screen\%20Recording\%202022-09-07\%20at\%202.55.09\%20PM.mov}{\textbf{Screen
+Recording 2022-09-07 at 2.55.09 PM.mov}}\\
+See the attached screen recording in docushare:
+\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-41059/Screen\%20Recording\%202022-09-07\%20at\%202.59.40\%20PM.mov}{\textbf{Screen
+Recording 2022-09-07 at 2.59.40 PM.mov}}
 
 
 Detailed steps results:
@@ -20332,8 +20453,9 @@ successfully played from the gallery.
 
 Execution status: {\bf Pass }
 
-Final comment:\\\href{https://docushare.lsstcorp.org/docushare/dsweb/Get/Document-43309/Screen\%20Recording\%202022-10-21\%20at\%202.17.30\%20PM.mov}{Recording
-2022-10-21 at 2.17.30 PM.mov}
+Final comment:\\See the attached screen recording in
+docushare:~\href{https://docushare.lsstcorp.org/docushare/dsweb/Get/Document-43309/Screen\%20Recording\%202022-10-21\%20at\%202.17.30\%20PM.mov}{\textbf{Screen
+Recording 2022-10-21 at 2.17.30 PM.mov}}
 
 
 Detailed steps results:
@@ -20359,8 +20481,8 @@ Page loads free of errors
   Actual Result \\
 {\footnotesize
 See
-Screen\href{https://docushare.lsstcorp.org/docushare/dsweb/Get/Document-43309/Screen\%20Recording\%202022-10-21\%20at\%202.17.30\%20PM.mov}{Recording
-2022-10-21 at 2.17.30 PM.mov} starting at 00:00
+\href{https://docushare.lsstcorp.org/docushare/dsweb/Get/Document-43309/Screen\%20Recording\%202022-10-21\%20at\%202.17.30\%20PM.mov}{\textbf{Screen
+Recording 2022-10-21 at 2.17.30 PM.mov}} starting at 00:00
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -20382,8 +20504,10 @@ The video plays a fulldome sky projection.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See Screen Recording 2022-10-21 at 2.17.30 PM.mov starting at 00:00
-starting at 00:04
+See
+\href{https://docushare.lsstcorp.org/docushare/dsweb/Get/Document-43309/Screen\%20Recording\%202022-10-21\%20at\%202.17.30\%20PM.mov}{\textbf{Screen
+Recording 2022-10-21 at 2.17.30 PM.mov}} starting at 00:00 starting at
+00:04
 
 }
 

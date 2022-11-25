@@ -31,7 +31,7 @@
 
 \title{LVV-P98: Verification of EPO Program Test Plan }
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-11-24 }
+\date{ 2022-11-25 }
 \author{ Lauren Corlies }
 
 \input{history_and_info.tex}
@@ -95,12 +95,18 @@ verified in test cycles:
   \textbf{Evaluation + Reporting} - user testing reports and
   demographics reports demonstrating the usability of the program
 \item
-  \textbf{Interface with Data Management} -~
+  \textbf{Interface with Data Management} - verify on preliminary data
+  sets the EPO side of the interface with DM since all software and
+  services are not yet completed
 \end{enumerate}
 
-The EPO program is defined in more detail in EPO DOC HERE. \citeds{LSE-89}
-contains the official requirements for EPO. \citeds{LSE-131} contains the
-interface requirements between Data Management and
+The EPO program is defined in more detail in
+\href{https://docushare.lsst.org/docushare/dsweb/Get/LEP-31/lep31_EPOdesign_20210416.pdf}{LEP-31
+EPO Design} .
+\href{https://docushare.lsst.org/docushare/dsweb/Get/LSE-89}{LSE-89}
+contains the official requirements for EPO.
+\href{https://docushare.lsst.org/docushare/dsweb/Get/LSE-131}{LSE-131}
+contains the interface requirements between Data Management and
 EPO.\\[2\baselineskip]
 
 
@@ -130,7 +136,7 @@ Section \ref{sect:overview} provides a summary of the test results, including an
 an overall assessment statement and suggestions for possible improvements.
 Section \ref{sect:detailedtestresults} provides detailed results for each step in each test case.
 
-The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P98}{LVV-P98} in Jira is \textbf{ Approved }.
+The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P98}{LVV-P98} in Jira is \textbf{ Completed }.
 
 \subsection{References}
 \label{sect:references}
@@ -169,9 +175,41 @@ desktops and mobile phones.~~
   testing prior to beginning a test cycle.
 \end{itemize}
 
+  \subsection{Exit Criteria}
+  In order for this event to be considered complete, the following
+criteria must be met:
+
+\begin{itemize}
+\tightlist
+\item
+  Raw test data, events, and telemetry have been saved for the EPO.
+\item
+  All test data has been analyzed and post processed.
+\item
+  A summary of the results of the test campaign has been captured in the
+  Overall Assessment and Recommended Improvements fields of this Test
+  Plan
+\item
+  A link to the verification artifacts used to produce the summary of
+  results has been populated in the Verification Artifacts field of this
+  Test Plan
+\item
+  Any failures have been captured in the
+  \href{https://jira.lsstcorp.org/projects/FRACAS/issues/}{FRACAS}
+  project
+\end{itemize}
 
 
 \subsection{Related Documentation}
+
+Docushare collection where additional relevant documentation can be found:
+
+\begin{itemize}
+\item The verification artifacts that are not attached in the Test Cycles or
+Test Cases directly are located in this DocuShare
+collection:~\href{https://docushare.lsst.org/docushare/dsweb/View/Collection-11916}{DocuShare
+Collection-11916}
+\end{itemize}
 
 
 
@@ -718,7 +756,7 @@ Lauren Corlies }
 } \\\hline
 \textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2719}{LVV-T2719}
-& {\small  } & {\small Blake Mason } &
+& {\small Blake Mason } & {\small Blake Mason } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small (1) Software Test Engineer }
@@ -726,7 +764,7 @@ Lauren Corlies }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2643}{LVV-T2643}
-& {\small  } & {\small Blake Mason } &
+& {\small Blake Mason } & {\small Blake Mason } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small (1) Software Test Engineer }
@@ -942,7 +980,7 @@ Lauren Corlies }
 & {\small Eric Rosas } & {\small Eric Rosas } &
 \begin{minipage}[]{6cm}
 \smallskip
-{\small  }
+{\small (1) Software Test Engineer }
 \medskip
 \end{minipage}
 \\ \hline
@@ -1011,7 +1049,7 @@ Lauren Corlies }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2680}{LVV-T2680}
-& {\small Eric Rosas } & {\small Mostafa Lutfi } &
+& {\small Eric Rosas } & {\small Eric Rosas } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small (1) Software Test Engineer }
@@ -1033,7 +1071,7 @@ Lauren Corlies }
 \begin{longtable}{p{2cm}cp{2.3cm}p{8.6cm}p{2.3cm}}
 \toprule
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P98}{LVV-P98}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ Verification of EPO Program }} & Approved \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ Verification of EPO Program }} & Completed \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C201}{LVV-C201}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ Skyviewer }} & Done \\\hline
 \textbf{Test Cases} &  \textbf{Ver.}  \\\toprule
@@ -1368,7 +1406,60 @@ Lauren Corlies }
 \subsection{Overall Assessment}
 \label{sect:overallassessment}
 
-Not yet available.
+This test plan for the EPO program verification consists of 8 test
+cycles which verifies both \citeds{LSE-89} and \citeds{LSE-131} requirement documents.
+Overall the execution of the traced test cases met the requirement
+specifications defined in those requirement documents.~
+
+For the EDC test cycle , some of the execution of the test cases
+actually verified the intent of the requirements due to various factors.
+For example, EPO-REQ-0175 states that the Zooniverse Project Builder
+shall allow authorized Data Rights Panel members to view existing
+metadata fields of the project's current subject set. But, there really
+is no ``metadata'' per se anymore with the way that the EPO Data Center
+and citizen science data pipeline work. What EPO are referring to as
+``metadata'' is really just the actual data fields, of which database
+columns will be approved and so data will be limited based on the
+columns in the database.Moreover, there is no specified upper limit for
+google platform storage option EPO has selected and the ~EDC will likely
+not contain 64TB by the end of the 10 year survey. Rubin EPO
+requirements Validation document attached to some EDC test cases (by
+Burwood group) provided additional insights and verification evidence
+for the object storage, database capacity and design, web server
+infrastructure, routing and connection related requirements.~
+
+The original author of the EPO requirements had a vision that EPO would
+be receiving large amounts of data every night from Data Management.
+However, what data was intended, why it was necessary, and how it would
+be used were never clearly defined. Instead of that approach, EPO has
+moved to a model where it only retrieves data from the Data Management
+databases on an as-needed basis. The citizen science infrastructure
+demonstrates that EPO has the capability for this transfer and this
+infrastructure will have to continue to evolve as Data Management
+completes its part of the Construction project.Furthermore, in order to
+verify the database quantity and size related requirements, the EPO team
+showed a demonstrated a scaled down version of data transfer and storage
+capabilities due to time and effort constraints. However, the EPO team
+did show the simulated calculations verifying the specified parameters.~
+
+For verifying EPO Website Requirements test cycle and verification of
+the EPO products, the EPO team used Google Chrome as the web browser in
+order to facilitate the testing process. In addition, the requirements
+themselves do not mandate any set of particular browsers to be
+supported. But, EPO team has used the industry standard platform Babel
+to ensure that the EPO program complies with and be styled correctly on
+all modern browsers and devices which includes- latest two versions of
+Edge, Safar, Firefox and Chrome on desktops, Chrome on android, and
+safari on IOS devices. Furthermore, the EPO team has tested all products
+manually in the above mentioned platforms. The EPO test personnels and
+System Verification Engineer involved frequently cross checked the test
+case executions on different platforms as well.~
+
+In the Skyviewer test cycle, the object details are simulated to verify
+that skyviewer contains a list of curated objects and graphic overlay
+for alerts stream data. When the real alert data streams are available,
+the sky viewer will be able to bring up the overlay and provide accurate
+information for the user.~
 
 \subsection{Recommended Improvements}
 \label{sect:recommendations}
@@ -1409,7 +1500,8 @@ Complete all steps on an iOS and Android mobile devices, in Safari and
 Chrome respectively
 
 Final comment:\\See the attached screen recording in docushare:
-\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40980/Screen\%20Recording\%202022-08-26\%20at\%2011.23.34\%20AM.mov}\\[2\baselineskip]
+\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40980/Screen\%20Recording\%202022-08-26\%20at\%2011.23.34\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 11.23.34 AM.mov}}\\[2\baselineskip]
 
 
 Detailed steps :
@@ -1549,7 +1641,8 @@ Verify that Object details data are queryable via GraphQL.
 
 
 Final comment:\\See the attached screen recording in
-docushare:~\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40982/Screen\%20Recording\%202022-08-26\%20at\%209.29.36\%20AM.mov}
+docushare:~\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40982/Screen\%20Recording\%202022-08-26\%20at\%209.29.36\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 9.29.36 AM.mov}}
 
 
 Detailed steps :
@@ -1613,7 +1706,8 @@ test case in Jira.
 
 
 Final comment:\\See the attached screen recording in docushare:
-​\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40981/Screen\%20Recording\%202022-08-26\%20at\%209.37.23\%20AM.mov}​​​
+‚Äã\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40981/Screen\%20Recording\%202022-08-26\%20at\%209.37.23\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 9.37.23 AM.mov}}‚Äã‚Äã‚Äã
 
 
 Detailed steps :
@@ -1649,9 +1743,9 @@ filtering functions (Mouse and Keyboard).
 \textbf{ Preconditions}:\\
 Complete all steps on a computer in the Chrome web browser
 
-Final comment:\\See the attached
-\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40978/Screen\%20Recording\%202022-08-26\%20at\%2010.50.58\%20AM.mov}{screen
-recording} in docushare.\\[2\baselineskip]
+Final comment:\\See the attached screen recording in
+docushare:~\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40978/Screen\%20Recording\%202022-08-26\%20at\%2010.50.58\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 10.50.58 AM.mov}}\\[2\baselineskip]
 
 
 Detailed steps :
@@ -2165,7 +2259,8 @@ display in the Skyviewer~
 
 
 Final comment:\\See the attached screen recording in docushare:
-\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-40979/Screen\%20Recording\%202022-08-26\%20at\%2011.38.28\%20AM.mov}
+\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-40979/Screen\%20Recording\%202022-08-26\%20at\%2011.38.28\%20AM.mov}{\textbf{Screen
+Recording 2022-08-26 at 11.38.28 AM.mov}}
 
 
 Detailed steps :
@@ -12558,9 +12653,11 @@ security, and compatability
 
 
 Final comment:\\See the attached screen recording in docushare:
-\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-41058/Screen\%20Recording\%202022-09-07\%20at\%202.55.09\%20PM.mov}
-and
-​\url{https://docushare.lsst.org/docushare/dsweb/Get/Document-41059/Screen\%20Recording\%202022-09-07\%20at\%202.59.40\%20PM.mov}​​​
+\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-41058/Screen\%20Recording\%202022-09-07\%20at\%202.55.09\%20PM.mov}{\textbf{Screen
+Recording 2022-09-07 at 2.55.09 PM.mov}}\\
+See the attached screen recording in docushare:
+\href{https://docushare.lsst.org/docushare/dsweb/Get/Document-41059/Screen\%20Recording\%202022-09-07\%20at\%202.59.40\%20PM.mov}{\textbf{Screen
+Recording 2022-09-07 at 2.59.40 PM.mov}}
 
 
 Detailed steps :
@@ -15350,8 +15447,9 @@ successfully played from the gallery.
 \textbf{ Preconditions}:\\
 
 
-Final comment:\\\href{https://docushare.lsstcorp.org/docushare/dsweb/Get/Document-43309/Screen\%20Recording\%202022-10-21\%20at\%202.17.30\%20PM.mov}{Recording
-2022-10-21 at 2.17.30 PM.mov}
+Final comment:\\See the attached screen recording in
+docushare:~\href{https://docushare.lsstcorp.org/docushare/dsweb/Get/Document-43309/Screen\%20Recording\%202022-10-21\%20at\%202.17.30\%20PM.mov}{\textbf{Screen
+Recording 2022-10-21 at 2.17.30 PM.mov}}
 
 
 Detailed steps :
